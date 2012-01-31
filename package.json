@@ -1,0 +1,15 @@
+{ "name": "request-fullscreen"
+, "description": "requestFullscreen polyfill"
+, "version": "0.0.1"
+, "homepage": "https://github.com/dodo/requestFullscreen.js"
+, "author": "dodo (https://github.com/dodo)"
+, "repository": {"type": "git", "url": "git://github.com/dodo/requestFullscreen.js.git"}
+, "main": "polyfill.js"
+, "engines": {"node": ">= 0.4.x"}
+, "keywords": ["request", "fullscreen", "polyfill", "browser", "shim"]
+, "scripts": {
+    "prepublish": "cake build"}
+, "devDependencies": {
+    "muffin": ">= 0.2.6",
+    "coffee-script": ">= 1.1.2"}
+}
