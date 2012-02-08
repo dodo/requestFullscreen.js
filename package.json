@@ -1,6 +1,6 @@
 { "name": "request-fullscreen"
 , "description": "requestFullscreen polyfill"
-, "version": "0.0.1"
+, "version": "0.1.0"
 , "homepage": "https://github.com/dodo/requestFullscreen.js"
 , "author": "dodo (https://github.com/dodo)"
 , "repository": {"type": "git", "url": "git://github.com/dodo/requestFullscreen.js.git"}
