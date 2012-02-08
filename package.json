@@ -12,6 +12,8 @@
 , "dependencies": {
     "domevents": ">= 0.0.1"}
 , "devDependencies": {
+    "browserify": ">= 1.6.1",
+    "scopify": ">= 0.2.1",
     "muffin": ">= 0.2.6",
     "coffee-script": ">= 1.1.2"}
 }
