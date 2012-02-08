@@ -9,6 +9,8 @@
 , "keywords": ["request", "fullscreen", "polyfill", "browser", "shim"]
 , "scripts": {
     "prepublish": "cake build"}
+, "dependencies": {
+    "domevents": ">= 0.0.1"}
 , "devDependencies": {
     "muffin": ">= 0.2.6",
     "coffee-script": ">= 1.1.2"}

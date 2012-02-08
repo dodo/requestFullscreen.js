@@ -1,3 +1,4 @@
+{ EventEmitter } = require 'domevents'
 # https://hacks.mozilla.org/2012/01/using-the-fullscreen-api-in-web-browsers/
 
 vendors = ["webkit", "moz", "o", "ms"]
@@ -23,15 +24,13 @@ vendors = ["webkit", "moz", "o", "ms"]
 @isFullscreen = do ->
     state = null
     found = document?.exitFullscreen
-    # workaround for ie
-    addEventListener = document?.addEventListener ? document?.attachEvent
+    doc = new EventEmitter(document, no)
     for vendor in [""].concat(vendors)
         if (found ?= document?["#{vendor}CancelFullScreen"])
             request = if request? then "#{vendor}FullScreen" else "fullscreen"
-            addEventListener("#{request.toLowerCase()}change", ->
+            doc.on "#{request.toLowerCase()}change", ->
                 state = document[request]
-            , no)
             break
     return (callback) ->
         return state unless callback?
-        addEventListener("#{request.toLowerCase()}change", callback, no)
+        doc.on("#{request.toLowerCase()}change", callback)
